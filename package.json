@@ -5,7 +5,22 @@
   "license": "MIT",
   "author": "TeePay",
   "homepage": "https://docs.teepay.me/docs/sdks/javascript",
-  "keywords": ["teepay", "payments", "mobile money", "checkout", "tanzania", "africa", "sdk"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kraftonnotgar-spec/teepay-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kraftonnotgar-spec/teepay-node/issues"
+  },
+  "keywords": [
+    "teepay",
+    "payments",
+    "mobile money",
+    "checkout",
+    "tanzania",
+    "africa",
+    "sdk"
+  ],
   "sideEffects": false,
   "engines": {
     "node": ">=18"

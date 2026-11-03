@@ -1,5 +1,7 @@
 # TeePay Node.js SDK
 
+[![CI](https://github.com/kraftonnotgar-spec/teepay-node/actions/workflows/ci.yml/badge.svg)](https://github.com/kraftonnotgar-spec/teepay-node/actions/workflows/ci.yml) [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 Official TypeScript/JavaScript SDK for the [TeePay API](https://docs.teepay.me): mobile money push
 payments, hosted checkout sessions, Control Numbers, payouts and webhook verification.
 
