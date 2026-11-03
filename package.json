@@ -1,0 +1,46 @@
+{
+  "name": "@teepay/sdk",
+  "version": "0.1.0",
+  "description": "Official TeePay SDK for Node.js and TypeScript: mobile money payments, hosted checkout, Control Numbers, payouts and webhook verification.",
+  "license": "MIT",
+  "author": "TeePay",
+  "homepage": "https://docs.teepay.me/docs/sdks/javascript",
+  "keywords": ["teepay", "payments", "mobile money", "checkout", "tanzania", "africa", "sdk"],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "build": "node scripts/clean.mjs && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && node scripts/postbuild.mjs",
+    "typecheck": "tsc -p tsconfig.esm.json --noEmit && tsc -p tsconfig.examples.json",
+    "test": "node scripts/test.mjs",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0"
+  }
+}
